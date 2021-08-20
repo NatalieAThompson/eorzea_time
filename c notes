@@ -1,0 +1,84 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+// char* user_input();
+
+int main(int num, char *ar[])
+{
+    if(num != 2)
+    {
+        printf("Not Valid");
+        return 0;
+    }
+    
+    char * key = ar[1];
+    
+    // char *word = user_input();
+    
+    char * word;
+    
+    scanf("%s\n", word);
+    
+    printf("%s", word);
+    
+    // encrypt(input);
+}
+
+// char* user_input()
+// {
+//     char *input;
+    
+//     scanf("%[^0]s", input);
+    
+//     return input;
+// }
+
+
+
+// In a substitution cipher, we “encrypt” (i.e., conceal in a reversible way) a message by replacing every letter with another letter. 
+// To do so, we use a key: in this case, a mapping of each of the letters of the alphabet to the letter it should correspond to when we encrypt it. 
+// To “decrypt” the message, the receiver of the message would need to know the key, so that they can reverse the process: 
+// translating the encrypt text (generally called ciphertext) back into the original message (generally called plaintext).
+
+// A key, for example, might be the string NQXPOMAFTRHLZGECYJIUWSKDVB. 
+// This 26-character key means that A (the first letter of the alphabet) should be converted into N (the first character of the key), 
+// B (the second letter of the alphabet) should be converted into Q (the second character of the key), and so forth.
+
+// A message like HELLO, then, would be encrypted as FOLLE, replacing each of the letters according to the mapping determined by the key.
+
+// Let’s write a program called substitution that enables you to encrypt messages using a substitution cipher. 
+// At the time the user executes the program, they should decide, by providing a command-line argument, 
+// on what the key should be in the secret message they’ll provide at runtime.
+
+// Here are a few examples of how the program might work. For example, 
+// if the user inputs a key of YTNSHKVEFXRBAUQZCLWDMIPGJO and a plaintext of HELLO:
+
+/*
+input: nested array, 1st element is the name of the main method, second element is the key
+output: string (nested char array)
+- If letter given is uppercase output should be uppercase
+- user needs to input word to be incrypted
+
+algorithm
+The main method takes a int `num` and char *`ar`[]
+    If num != 2
+        return "Not valid"
+    
+    char *key = ar[1]
+    
+    ask for user input. "plaintext: "
+    encrypt_input
+
+alphabet = "abcdefghijklmnopqrstuvwzyz"
+
+
+*/
+
+
