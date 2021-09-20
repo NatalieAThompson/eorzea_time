@@ -1,7 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #faece6;
+  color: #133438;
+}
 
 h1 {
-  text-align: center;
+  margin-left: 20%;
+  font-size: 3rem;
+  margin-top: 50px;
+  font-family: 'Courgette', cursive;
 }
 
 .center {
@@ -18,20 +32,21 @@ h1 {
 
 .clock {
   border-radius: 100%;
-  background: rgb(163,83,66);
-  background: radial-gradient(circle, rgba(163,83,66,1) 60%, rgba(205,137,37,1) 75%);
+  /* background: rgb(163,83,66); */
+  /* background: radial-gradient(circle, rgba(163,83,66,1) 60%, rgba(205,137,37,1) 75%); */
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #3A8E99;
 }
 
 .black-screen {
   border-radius: 100%;
   height: 90%;
   width: 90%;
-  background-color: black;
+  background-color: #133438;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,3 +60,79 @@ h1 {
   font-size: 4rem;
   color: white;
 }
+
+.left {
+  display: inline-block;
+  width: 75%;
+  vertical-align: top;
+}
+
+.left p {
+  padding: 5px;
+  margin: 5px;
+  margin-left: 20%;
+  color: brown;
+}
+
+input {
+  position: relative;
+  z-index: 2;
+}
+
+.right {
+  display: inline-block;
+  width: 25%;
+  vertical-align: top;
+  height: 100vh;
+  background-color: #133438;
+}
+
+.left li {
+  margin-left: 20%;
+  background-color: #EBD2C7;
+  padding: 10px;
+  list-style: none;
+  margin-top: 10px;
+}
+
+.left li button {
+  position: relative;
+  z-index: 1;
+  background-color: inherit;
+  border: none;
+  color: #3A8E99;
+}
+
+.left li form {
+  display: inline-block;
+}
+
+.left li div {
+  display: inline-block;
+}
+
+.middle {
+  position: absolute;
+  margin-left: 60vw;
+  z-index: 2;
+  margin-top: 25vh;
+}
+
+dl, dt, dd {
+  display: inline-block;
+}
+
+dl {
+  margin-left: 20%;
+  padding: 10px 0 10px 0;
+}
+
+.background img {
+  position: absolute;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 30%;
+}
+
+

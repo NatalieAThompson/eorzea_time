@@ -4,9 +4,41 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Eorzea Time</title>
+  <link href="../public/css/main.css" rel="stylesheet">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
 </head>
 <body>
+  <div class="half">
+    <h1>Currently Tracked Items</h1>
+    <ul>
+      <li>Stone @ 5:00 pm</li>
+    </ul>
 
+    <form action="#" method="post">
+      <dl>
+        <dt>Item Name</dt>
+        <dd><input type="text" name="item"></dd>
+        <dt>Time Frame</dt>
+        <dd><input type="time" name="time"></dd>
+      </dl>
+      <input type="submit">
+    </form>
+  </div><!--
+
+  --><div class="half">
+    <h1>Current Time in FFXIV</h1>
+    <div class="center">
+      <div class="clock-container">
+        <div class="clock">
+          <div class="black-screen">
+            <div class="screen">02:30</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <script src="/scripts/application.js"></script> -->
 </body>
 </html>

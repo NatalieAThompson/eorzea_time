@@ -1,27 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="2">
-  <title><%= @title %></title>
-  <link href="/css/main.css" rel="stylesheet">
-</head>
-<body>
-  <h1>Current Time in FFXIV</h1>
-  <div class="center">
-    <div class="clock-container">
-      <div class="clock">
-        <div class="black-screen">
-          <div class="screen"><%= format_time() %></div>
-        </div>
-      </div>
-    </div>
-  </div>
+
+    <h1>Currently Tracked Items</h1>
+
+    <% if session[:message] %>
+      <p><%= session.delete(:message)%></p>
+    <% end %>
+
+    <form action="/add" method="post">
+      <dl>
+        <dt>Item Name</dt>
+        <dd><input type="text" name="item"></dd>
+        <dt>Time Frame</dt>
+        <dd><input type="time" name="time"></dd>
+      </dl>
+      <input type="submit">
+    </form>
+
+    <ul>
+      <% @items.each do |item| %>
+        <li>
+          <form action="#" method="get">
+            <button type="submit"><i class="fas fa-music"></i></button>
+          </form>
+          <%# <a href="#"><i class="fas fa-music"></i></a> %>
+          <form action="<%= item[:name] %>/delete" method="post">
+            <button type="submit"><i class="fas fa-trash-alt"></i></button>
+          </form>
+          <div><%= item[:time] %> <b><%= item[:name] %></b></div>
+        </li>
+      <% end %>
+    </ul>
 
 
 
-  <%# <script src="/scripts/main.js"></script> %>
-</body>
-</html>
+
+
+
+
+
