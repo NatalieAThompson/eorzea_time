@@ -26,6 +26,12 @@
     <img src="/images/2701521.jpg">
   <div>
   <div class="left">
+  <%# Logout shouldn't appear if user is logged out %>
+  <% if session[:username] %>
+    <form action="/logout" method="post">
+      <button class="logout-btn">Log Out</button>
+    </form>
+  <% end %>
   <%== yield %>
   </div><!--
     --><div class="right">

@@ -1,8 +1,4 @@
-<form action="/guest" method="post">
-  <button type="submit" class="logout-btn">Continue as a Guest</button>
-</form>
-
-<form action="/login" method="post">
+<form action="/signup" method="post">
   <fieldset>
     <% if session[:message] %>
       <p><%= session.delete(:message)%></p>
@@ -12,8 +8,10 @@
       <dd><input type="text" id="username" name="username"></dd>
       <dt><label for="password">Password:</label></dt>
       <dd><input type="password" id="password" name="password"></dd>
+      <dt><label for="password2">Password:</label></dt>
+      <dd><input type="password" id="password2" name="password2"></dd>
     </dl>
-    <input class="login-btn" type="submit" value="Login">
-    <a href="/signup">Sign Up</a>
+    <input class="login-btn" type="submit" value="Sign Up">
+    <a href="/login">Login</a>
   </fieldset>
 </form>

@@ -1,4 +1,10 @@
 
+  <% if session[:guest] && !session[:username] %>
+    <form action="/login" method="get">
+      <button class="logout-btn">Sign In</button>
+    </form>
+  <% end %>
+
     <h1>Currently Tracked Items</h1>
 
     <% if session[:message] %>
@@ -29,6 +35,7 @@
         </li>
       <% end %>
     </ul>
+
 
 
 
