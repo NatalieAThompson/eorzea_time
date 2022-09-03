@@ -7,3 +7,4 @@ gem "sinatra-contrib"
 gem "erubis"
 gem "webrick"
 gem "bcrypt"
+gem 'sinatra-cross_origin'

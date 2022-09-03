@@ -3,16 +3,19 @@ require "sinatra/reloader"
 require "bcrypt"
 require "yaml"
 require "fileutils"
+require 'sinatra/cross_origin'
 
 require_relative "timer"
 
 configure do
+  enable :cross_origin
   enable "sessions"
   set :sessions_secret, 'secret'
   set :erb, :escape_html => true
 end
 
 before do
+  response.headers['Access-Control-Allow-Origin'] = '*'
   @time = Timer.new
   session[:items] ||= []
 end
@@ -213,6 +216,13 @@ end
 
 get "/current_time" do
   format_time()
+end
+
+options "*" do
+  response.headers["Allow"] = "GET, PUT, POST, DELETE, OPTIONS"
+  response.headers["Access-Control-Allow-Headers"] = "Authorization, Content-Type, Accept, X-User-Email, X-Auth-Token"
+  response.headers["Access-Control-Allow-Origin"] = "*"
+  200
 end
 
 # Features to complete for this project
